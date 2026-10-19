@@ -19,237 +19,169 @@ Welcome to my Java Development Projects repository!
 
 This repository brings together six projects that demonstrate my practical learning of Java programming and application development. Each project explores a different concept, ranging from graphical user interfaces to communication between distributed applications.
 
-My objective is to develop a strong foundation in Java, object-oriented programming, software architecture, database integration, and networking.
 
 ## 🗂️ Project Explorer
 
-| No. | Project | Technology / Concept | Explore |
-|---:|---|---|---|
-| 01 | Java Servlet | Server-side Java | [View](#1-java-servlet) |
-| 02 | Student Registration Form | Java Swing, GUI | [View](#2-student-registration-form) |
-| 03 | Calculator | Swing, MVC Architecture | [View](#3-calculator-using-mvc-architecture) |
-| 04 | Database Connectivity | JDBC, SQL | [View](#4-jdbc-database-connectivity) |
-| 05 | Client-Server Communication | Networking | [View](#5-client-server-communication) |
-| 06 | Remote Method Invocation | Java RMI | [View](#6-java-remote-method-invocation-rmi) |
+| No. | Project | Technology / Concept |
+|---:|---|---|
+| 01 | [Calculator Using MVC Architecture](#1-calculator-using-mvc-architecture) | Java Swing, MVC |
+| 02 | [Student Registration Form](#2-student-registration-form-using-java-swing) | Java Swing, GUI |
+| 03 | [JDBC Connectivity](#3-jdbc-database-connectivity) | JDBC, SQL |
+| 04 | [Server-Client Communication](#4-server-client-communication) | Networking |
+| 05 | [Remote Method Invocation (RMI)](#5-java-remote-method-invocation-rmi) | Distributed Computing |
+| 06 | [Java Servlet](#6-java-servlet) | Server-Side Java |
 
-## 🧭 Java Concepts at a Glance
+## 🧭 Java Projects Workflow
 
 ```mermaid
 flowchart TD
-    A[Java Development] --> B[Desktop Applications]
-    A --> C[Web Applications]
-    A --> D[Database Integration]
-    A --> E[Network Programming]
-    A --> F[Distributed Computing]
+    A["01. Calculator"] --> B["02. Student Registration Form"]
+    B --> C["03. JDBC Connectivity"]
+    C --> D["04. Server-Client Communication"]
+    D --> E["05. Java RMI"]
+    E --> F["06. Java Servlet"]
 
-    B --> G[Student Registration Form]
-    B --> H[Calculator with MVC]
-    C --> I[Java Servlet]
-    D --> J[JDBC]
-    E --> K[Client-Server Communication]
-    F --> L[Java RMI]
+    style A fill:#2563eb,color:#fff,stroke:#1d4ed8
+    style B fill:#0d9488,color:#fff,stroke:#0f766e
+    style C fill:#7c3aed,color:#fff,stroke:#6d28d9
+    style D fill:#ea580c,color:#fff,stroke:#c2410c
+    style E fill:#475569,color:#fff,stroke:#334155
+    style F fill:#be185d,color:#fff,stroke:#9d174d
 ```
+
+---
 
 ## 🚀 Projects
 
-### 1. Java Servlet
-
-**File:** `Servlet.pdf`
-
-**Overview**
-
-Explores Java Servlets, server-side components used to process requests and generate responses in web applications.
-
-**Concepts explored**
-
-- Servlet lifecycle
-- HTTP request and response handling
-- Server-side Java programming
-- Dynamic web application fundamentals
-
-**Workflow**
-
-```mermaid
-flowchart LR
-    A[Client / Browser] --> B[Web Server]
-    B --> C[Servlet]
-    C --> D[Process Request]
-    D --> E[Generate Response]
-    E --> A
-```
-
-**Learning outcome:** Understanding how Java code can handle web requests on the server.
-
----
-
-### 2. Student Registration Form
-
-**File:** `(GUI) for a student registration form using the Swing framework.pdf`
-
-**Overview**
-
-A graphical interface for entering student information using Java Swing components.
-
-**Concepts explored**
-
-- JFrame and JPanel
-- Labels and text fields
-- Buttons and event handling
-- Form layout and user interaction
-
-**Workflow**
-
-```mermaid
-flowchart TD
-    A[Launch Application] --> B[Display Registration Form]
-    B --> C[Enter Student Details]
-    C --> D[Interact with Form]
-    D --> E[Handle User Event]
-    E --> F[Show Result]
-```
-
-**Learning outcome:** Building interactive desktop interfaces using Java Swing.
-
----
-
-### 3. Calculator Using MVC Architecture
+### 1. Calculator Using MVC Architecture
 
 **File:** `Calculator using Java Swing following MVC Architecture.pdf`
 
-**Overview**
+A calculator application built using Java Swing and the Model-View-Controller (MVC) design pattern.
 
-A calculator project demonstrating the Model-View-Controller pattern to separate the interface, calculation logic, and control logic.
+**Key concepts:** Java Swing, event handling, MVC architecture, separation of concerns, calculation logic.
 
-**Architecture**
+**Workflow:**
+
+```mermaid
+flowchart LR
+    A[User Input] --> B[View: Swing GUI]
+    B --> C[Controller]
+    C --> D[Model: Calculations]
+    D --> C
+    C --> E[Display Result]
+```
+
+### 2. Student Registration Form Using Java Swing
+
+**File:** `(GUI) for a student registration form using the Swing framework.pdf`
+
+A graphical registration form demonstrating how users can enter student information through a Java Swing interface.
+
+**Key concepts:** JFrame, JPanel, text fields, buttons, layouts, event handling.
+
+**Workflow:**
 
 ```mermaid
 flowchart TD
-    A[User] --> B[View: Java Swing]
-    B --> C[Controller]
-    C --> D[Model: Calculation Logic]
-    D --> C
-    C --> B
-    B --> E[Display Result]
+    A[Open Form] --> B[Enter Student Details]
+    B --> C[Submit Form]
+    C --> D[Process User Action]
+    D --> E[Display Result]
 ```
 
-| Component | Responsibility |
-|---|---|
-| Model | Performs calculations and manages application data |
-| View | Displays the calculator interface |
-| Controller | Connects user actions with application logic |
-
-**Learning outcome:** Understanding separation of concerns and maintainable application design.
-
----
-
-### 4. JDBC — Database Connectivity
+### 3. JDBC Database Connectivity
 
 **File:** `JDBC ( Java Database Connectivity ).pdf`
 
-**Overview**
+Explores how Java applications connect to relational databases and execute SQL operations through JDBC.
 
-Explores JDBC, the Java API for connecting applications to relational databases and executing SQL operations.
+**Key concepts:** JDBC drivers, Connection, Statement, ResultSet, SQL queries.
 
-**Concepts explored**
-
-- JDBC drivers
-- Database connections
-- SQL query execution
-- `Connection`, `Statement`, and `ResultSet`
-- Retrieving and manipulating database records
-
-**Workflow**
+**Workflow:**
 
 ```mermaid
 flowchart LR
     A[Java Application] --> B[JDBC API]
     B --> C[JDBC Driver]
-    C --> D[Relational Database]
+    C --> D[Database]
     D --> E[Query Results]
-    E --> A
 ```
 
-**Learning outcome:** Understanding how Java applications interact with databases.
-
----
-
-### 5. Client-Server Communication
+### 4. Server-Client Communication
 
 **File:** `Server and Client.pdf`
 
-**Overview**
+Demonstrates the fundamentals of communication between client and server applications over a network.
 
-Explores the client-server model, in which separate applications communicate over a network to exchange information.
+**Key concepts:** Client-server architecture, network communication, request-response handling, socket programming concepts.
 
-**Concepts explored**
-
-- Client-server architecture
-- Network communication
-- Request and response patterns
-- Socket programming fundamentals
-
-**Workflow**
+**Workflow:**
 
 ```mermaid
 sequenceDiagram
     participant C as Client
     participant S as Server
-    C->>S: Send request or message
-    S->>S: Process request
-    S-->>C: Return response
+    C->>S: Send Message
+    S->>S: Process Request
+    S-->>C: Send Response
 ```
 
-**Learning outcome:** Understanding how applications communicate across a network. The exact implementation depends on the networking APIs used in the project.
-
----
-
-### 6. Java Remote Method Invocation (RMI)
+### 5. Java Remote Method Invocation (RMI)
 
 **File:** `RMI.pdf`
 
-**Overview**
+Explores how Java applications invoke methods on remote objects running in another Java Virtual Machine.
 
-Explores Java RMI, which allows a Java application to invoke methods on remote objects running in another Java Virtual Machine.
+**Key concepts:** Remote interfaces, remote objects, RMI registry, remote method calls, distributed computing.
 
-**Concepts explored**
-
-- Remote interfaces
-- Remote objects
-- RMI client-server architecture
-- Remote method invocation
-- Distributed application fundamentals
-
-**Workflow**
+**Workflow:**
 
 ```mermaid
 sequenceDiagram
     participant C as RMI Client
     participant R as RMI Registry
     participant S as Remote Server
-
-    C->>R: Look up remote object
-    R-->>C: Return remote reference
-    C->>S: Invoke remote method
-    S->>S: Execute method
-    S-->>C: Return result
+    C->>R: Look Up Remote Object
+    R-->>C: Return Remote Reference
+    C->>S: Invoke Remote Method
+    S-->>C: Return Result
 ```
 
-**Learning outcome:** Understanding how Java applications can communicate through remote method calls.
+### 6. Java Servlet
+
+**File:** `Servlet.pdf`
+
+Explores server-side Java programming using Servlets to process client requests and generate web responses.
+
+**Key concepts:** Servlet lifecycle, HTTP requests and responses, request processing, dynamic web applications.
+
+**Workflow:**
+
+```mermaid
+flowchart TD
+    A[Client / Browser] --> B[Web Server]
+    B --> C[Servlet Container]
+    C --> D[Servlet Processes Request]
+    D --> E[HTTP Response]
+    E --> A
+```
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technologies Used
 
-| Technology | Purpose |
+| Technology | Application |
 |---|---|
-| Java | Core programming language |
-| Java Swing | Desktop GUI development |
-| Java Servlets | Server-side web programming |
+| Java | Programming language |
+| Java Swing | Desktop interfaces |
+| MVC | Software architecture |
 | JDBC | Database connectivity |
-| SQL | Relational database operations |
-| MVC | Application architecture |
-| Client-server networking | Communication between applications |
+| SQL | Database queries |
+| Client-server networking | Network communication |
 | Java RMI | Remote method invocation |
+| Java Servlets | Server-side web development |
+
 
 ## 📈 Skills Developed
 
