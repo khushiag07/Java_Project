@@ -36,7 +36,7 @@ This repository brings together six projects that demonstrate my practical learn
 ```mermaid
 flowchart TD
     B["02. Student Registration Form"] --> A["01. Calculator"]
-    B --> C["03. JDBC Connectivity"]
+    A --> C["03. JDBC Connectivity"]
     C --> D["04. Server-Client Communication"]
     D --> E["05. Java RMI"]
     E --> F["06. Java Servlet"]
@@ -53,7 +53,24 @@ flowchart TD
 
 ## 🚀 Projects
 
-### 1. Calculator Using MVC Architecture
+### 1. Student Registration Form Using Java Swing
+
+**File:** `(GUI) for a student registration form using the Swing framework.pdf`
+
+A graphical registration form demonstrating how users can enter student information through a Java Swing interface.
+
+**Key concepts:** JFrame, JPanel, text fields, buttons, layouts, event handling.
+
+**Workflow:**
+
+```mermaid
+flowchart TD
+    A[Open Form] --> B[Enter Student Details]
+    B --> C[Submit Form]
+    C --> D[Process User Action]
+    D --> E[Display Result]
+```
+### 2. Calculator Using MVC Architecture
 
 **File:** `Calculator using Java Swing following MVC Architecture.pdf`
 
@@ -70,24 +87,6 @@ flowchart LR
     C --> D[Model: Calculations]
     D --> C
     C --> E[Display Result]
-```
-
-### 2. Student Registration Form Using Java Swing
-
-**File:** `(GUI) for a student registration form using the Swing framework.pdf`
-
-A graphical registration form demonstrating how users can enter student information through a Java Swing interface.
-
-**Key concepts:** JFrame, JPanel, text fields, buttons, layouts, event handling.
-
-**Workflow:**
-
-```mermaid
-flowchart TD
-    A[Open Form] --> B[Enter Student Details]
-    B --> C[Submit Form]
-    C --> D[Process User Action]
-    D --> E[Display Result]
 ```
 
 ### 3. JDBC Database Connectivity
