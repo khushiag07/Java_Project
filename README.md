@@ -35,7 +35,7 @@ This repository brings together six projects that demonstrate my practical learn
 
 ```mermaid
 flowchart TD
-    B["02. Student Registration Form"] --> A["01. Calculator"]
+    B["01. Student Registration Form"] --> A["02. Calculator"]
     A --> C["03. JDBC Connectivity"]
     C --> D["04. Server-Client Communication"]
     D --> E["05. Java RMI"]
