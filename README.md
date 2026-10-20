@@ -24,8 +24,8 @@ This repository brings together six projects that demonstrate my practical learn
 
 | No. | Project | Technology / Concept |
 |---:|---|---|
-| 01 | [Calculator Using MVC Architecture](#1-calculator-using-mvc-architecture) | Java Swing, MVC |
-| 02 | [Student Registration Form](#2-student-registration-form-using-java-swing) | Java Swing, GUI |
+| 01 | [Student Registration Form](#2-student-registration-form-using-java-swing) | Java Swing, GUI |
+| 02 | [Calculator Using MVC Architecture](#1-calculator-using-mvc-architecture) | Java Swing, MVC |
 | 03 | [JDBC Connectivity](#3-jdbc-database-connectivity) | JDBC, SQL |
 | 04 | [Server-Client Communication](#4-server-client-communication) | Networking |
 | 05 | [Remote Method Invocation (RMI)](#5-java-remote-method-invocation-rmi) | Distributed Computing |
@@ -35,7 +35,7 @@ This repository brings together six projects that demonstrate my practical learn
 
 ```mermaid
 flowchart TD
-    A["01. Calculator"] --> B["02. Student Registration Form"]
+    B["02. Student Registration Form"] --> A["01. Calculator"]
     B --> C["03. JDBC Connectivity"]
     C --> D["04. Server-Client Communication"]
     D --> E["05. Java RMI"]
